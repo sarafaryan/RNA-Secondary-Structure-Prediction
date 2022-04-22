@@ -9,7 +9,7 @@ SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 CC       = g++
-CFLAGS 	 = -O3
+CFLAGS 	 = -O3 -std=c++17
 
 .PHONY: all clean
 

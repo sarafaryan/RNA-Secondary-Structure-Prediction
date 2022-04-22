@@ -12,7 +12,10 @@ int main() {
 }
 
 /*
-Build instructions:
+To build:
 $ make
 $ ./bin/main
+
+To clean:
+$ make clean
 */

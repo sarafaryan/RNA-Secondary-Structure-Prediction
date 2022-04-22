@@ -10,12 +10,12 @@ int solve(rnaSeq rnaseq) {
 
     std::vector<std::vector<int>> dp(n + 1, std::vector<int>(n + 1));
 
-    for(int k = 5 ; k < n ; k++) {
-        for(int i = 1 ; i <= (n-k) ; i++) {
+    for(int k = 5; k <= n; k++) {
+        for(int i = 1; i + k <= n; i++) {
             int j = i + k;
             int &res = dp[i][j];
 
-            for(int t = i ; t <= (j-5) ; j++) 
+            for(int t = i; t <= j - 5; t++) 
                 if(complement_base(rnaseq[t]) == rnaseq[j])
                     res = std::max(res, 1 + dp[i][t - 1] + dp[t + 1][j - 1]);
             

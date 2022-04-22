@@ -15,7 +15,7 @@ rnaSeq::rnaSeq(const std::string &seq) {
 }
 
 char &rnaSeq::operator [] (size_t idx) {
-    return seq[idx];
+    return seq[idx - 1]; // convert 1-based to 0-based
 }
 
 bool rnaSeq::valid() {

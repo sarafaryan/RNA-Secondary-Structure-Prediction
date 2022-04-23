@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item space">
+                <a class="nav-link active" aria-current="page" href="./Introduction.html">Introduction</a>
+              </li>
+              <li class="nav-item space">
+                <a class="nav-link active" aria-current="page" href="./algorithm.html">Algorithm</a>
+              </li>
+              <li class="nav-item space">
+                <a class="nav-link active" aria-current="page" href="./time.html">Timing Analysis</a>
+              </li>
+              
+              
+              
+          </div>
+        </div>
+      </nav>
+      <div class="algo">
+          <div class="center">RNA Folding Algorithm</div>
+          <br>
+          <div class="center1">Data Structures - <br>DP Table - Stores value for every (i,j) <br>
+            Previous table - Stores the predecessor of the current state.
+            
+          </div>
+
+          <div>
+            The RNA Folding Algorithm involves a DP table where every state dp[i][j] is defined as the maximum number of base pairs in a secondary structure for the range b<sub>i</sub> , b<sub>i+1</sub> , ...... , b<sub>j</sub>. <br>
+            For every state the optimal value will be the one of the following :-
+            <ol>
+              <li>If j is not a member of a pair, use dp[i][j-1] 
+              </li>
+              <li>
+                If j pairs with some t < j - 4, then we will get 2 independent subproblems dp[i][t-1] and dp[t+1][j-1].
+              </li>
+            </ol>
+            The following recurrence holds ->
+            <br>
+            <img src="./recur.jpeg" alt="" class="img">
+          </div>
+
+          
+
+      </div>
+</body>
+</html>

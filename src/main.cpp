@@ -1,6 +1,8 @@
 #include <iostream>
 #include "../include/solver.h"
 ///main function
+///
+/// \return Returns 0 on successful compilation
 int main() {
 
     std::string input;

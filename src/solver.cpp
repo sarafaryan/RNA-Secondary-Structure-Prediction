@@ -1,12 +1,17 @@
 #include "../include/solver.h"
 
 ///test function
+///
+/// \return 42
 int solve() {
     return 42;
 }
 
 
 ///Solver function which calls find_pairs function and constructs the dp table and the previous_state table which is used to get the pairs
+///
+/// \param rnaseq Given rnaseq
+/// \return Calls find_pair() function
 std::vector<std::pair<int, int>> solve(rnaSeq rnaseq) {
     int n = rnaseq.length();
 
@@ -39,6 +44,12 @@ std::vector<std::pair<int, int>> solve(rnaSeq rnaseq) {
 }
 
 ///find_pairs function returns a vector of <int,int>  which contains all the answer pairs
+///
+/// \param dp dp table
+/// \param previous_state previous_state table
+/// \param l left pointer
+/// \param r right pointer
+/// \return vector of <int,int>  which contains all the answer pairs
 std::vector<std::pair<int, int>> find_pairs(std::vector<std::vector<int>> &dp, std::vector<std::vector<int>> &previous_state, int l, int r) {
     if(l < 1 or r < l or dp.size() - 1 < r or previous_state[l][r] == -1)
         return {};

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../include/solver.h"
-
+///main function
 int main() {
 
     std::string input;

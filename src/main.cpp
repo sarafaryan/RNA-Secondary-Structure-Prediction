@@ -8,7 +8,11 @@ int main() {
     
     rnaSeq rnaseq(input);
 
-    std::cout << solve(rnaseq) << std::endl;
+    auto ans = solve(rnaseq);
+    std::cout << ans.size() << std::endl;
+    for(auto [l, r]: ans)
+        std::cout << l << ' ' << r << std::endl;
+
 }
 
 /*
